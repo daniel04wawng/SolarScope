@@ -22,3 +22,5 @@
 
 # Ignore crash reports and logs
 *.log -text
+
+# comment
