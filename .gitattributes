@@ -1,0 +1,24 @@
+# Ensure consistent LF line endings in text files
+* text=auto
+
+# Unity YAML files (important for version control)
+*.unity text
+*.prefab text
+*.asset text
+*.mat text
+*.anim text
+
+# Binary files (no line-ending conversions)
+*.dll binary
+*.exe binary
+*.png binary
+*.jpg binary
+*.fbx binary
+*.mp3 binary
+*.ogg binary
+*.wav binary
+*.tga binary
+*.psd binary
+
+# Ignore crash reports and logs
+*.log -text
