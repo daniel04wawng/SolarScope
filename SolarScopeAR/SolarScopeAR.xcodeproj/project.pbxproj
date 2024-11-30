@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		B6C9DF642CFBB597007E028A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6C9DF4B2CFBB595007E028A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6C9DF522CFBB595007E028A;
+			remoteInfo = SolarScopeAR;
+		};
+		B6C9DF6E2CFBB597007E028A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6C9DF4B2CFBB595007E028A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6C9DF522CFBB595007E028A;
+			remoteInfo = SolarScopeAR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B6C9DF532CFBB595007E028A /* SolarScopeAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarScopeAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C9DF632CFBB597007E028A /* SolarScopeARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarScopeARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C9DF6D2CFBB597007E028A /* SolarScopeARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarScopeARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B6C9DF552CFBB595007E028A /* SolarScopeAR */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SolarScopeAR;
+			sourceTree = "<group>";
+		};
+		B6C9DF662CFBB597007E028A /* SolarScopeARTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SolarScopeARTests;
+			sourceTree = "<group>";
+		};
+		B6C9DF702CFBB597007E028A /* SolarScopeARUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SolarScopeARUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6C9DF502CFBB595007E028A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C9DF602CFBB597007E028A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C9DF6A2CFBB597007E028A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B6C9DF4A2CFBB595007E028A = {
+			isa = PBXGroup;
+			children = (
+				B6C9DF552CFBB595007E028A /* SolarScopeAR */,
+				B6C9DF662CFBB597007E028A /* SolarScopeARTests */,
+				B6C9DF702CFBB597007E028A /* SolarScopeARUITests */,
+				B6C9DF542CFBB595007E028A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B6C9DF542CFBB595007E028A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6C9DF532CFBB595007E028A /* SolarScopeAR.app */,
+				B6C9DF632CFBB597007E028A /* SolarScopeARTests.xctest */,
+				B6C9DF6D2CFBB597007E028A /* SolarScopeARUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6C9DF522CFBB595007E028A /* SolarScopeAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C9DF772CFBB597007E028A /* Build configuration list for PBXNativeTarget "SolarScopeAR" */;
+			buildPhases = (
+				B6C9DF4F2CFBB595007E028A /* Sources */,
+				B6C9DF502CFBB595007E028A /* Frameworks */,
+				B6C9DF512CFBB595007E028A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B6C9DF552CFBB595007E028A /* SolarScopeAR */,
+			);
+			name = SolarScopeAR;
+			packageProductDependencies = (
+			);
+			productName = SolarScopeAR;
+			productReference = B6C9DF532CFBB595007E028A /* SolarScopeAR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6C9DF622CFBB597007E028A /* SolarScopeARTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C9DF7A2CFBB597007E028A /* Build configuration list for PBXNativeTarget "SolarScopeARTests" */;
+			buildPhases = (
+				B6C9DF5F2CFBB597007E028A /* Sources */,
+				B6C9DF602CFBB597007E028A /* Frameworks */,
+				B6C9DF612CFBB597007E028A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6C9DF652CFBB597007E028A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B6C9DF662CFBB597007E028A /* SolarScopeARTests */,
+			);
+			name = SolarScopeARTests;
+			packageProductDependencies = (
+			);
+			productName = SolarScopeARTests;
+			productReference = B6C9DF632CFBB597007E028A /* SolarScopeARTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B6C9DF6C2CFBB597007E028A /* SolarScopeARUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C9DF7D2CFBB597007E028A /* Build configuration list for PBXNativeTarget "SolarScopeARUITests" */;
+			buildPhases = (
+				B6C9DF692CFBB597007E028A /* Sources */,
+				B6C9DF6A2CFBB597007E028A /* Frameworks */,
+				B6C9DF6B2CFBB597007E028A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6C9DF6F2CFBB597007E028A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B6C9DF702CFBB597007E028A /* SolarScopeARUITests */,
+			);
+			name = SolarScopeARUITests;
+			packageProductDependencies = (
+			);
+			productName = SolarScopeARUITests;
+			productReference = B6C9DF6D2CFBB597007E028A /* SolarScopeARUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B6C9DF4B2CFBB595007E028A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					B6C9DF522CFBB595007E028A = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					B6C9DF622CFBB597007E028A = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = B6C9DF522CFBB595007E028A;
+					};
+					B6C9DF6C2CFBB597007E028A = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = B6C9DF522CFBB595007E028A;
+					};
+				};
+			};
+			buildConfigurationList = B6C9DF4E2CFBB595007E028A /* Build configuration list for PBXProject "SolarScopeAR" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B6C9DF4A2CFBB595007E028A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B6C9DF542CFBB595007E028A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6C9DF522CFBB595007E028A /* SolarScopeAR */,
+				B6C9DF622CFBB597007E028A /* SolarScopeARTests */,
+				B6C9DF6C2CFBB597007E028A /* SolarScopeARUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6C9DF512CFBB595007E028A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C9DF612CFBB597007E028A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C9DF6B2CFBB597007E028A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6C9DF4F2CFBB595007E028A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C9DF5F2CFBB597007E028A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C9DF692CFBB597007E028A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6C9DF652CFBB597007E028A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6C9DF522CFBB595007E028A /* SolarScopeAR */;
+			targetProxy = B6C9DF642CFBB597007E028A /* PBXContainerItemProxy */;
+		};
+		B6C9DF6F2CFBB597007E028A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6C9DF522CFBB595007E028A /* SolarScopeAR */;
+			targetProxy = B6C9DF6E2CFBB597007E028A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B6C9DF752CFBB597007E028A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B6C9DF762CFBB597007E028A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6C9DF782CFBB597007E028A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SolarScopeAR/Preview Content\"";
+				DEVELOPMENT_TEAM = 3RTLJ4T3P8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solarscope.SolarScopeAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6C9DF792CFBB597007E028A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SolarScopeAR/Preview Content\"";
+				DEVELOPMENT_TEAM = 3RTLJ4T3P8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solarscope.SolarScopeAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B6C9DF7B2CFBB597007E028A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RTLJ4T3P8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solarscope.SolarScopeARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolarScopeAR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SolarScopeAR";
+			};
+			name = Debug;
+		};
+		B6C9DF7C2CFBB597007E028A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RTLJ4T3P8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solarscope.SolarScopeARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolarScopeAR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SolarScopeAR";
+			};
+			name = Release;
+		};
+		B6C9DF7E2CFBB597007E028A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RTLJ4T3P8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solarscope.SolarScopeARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SolarScopeAR;
+			};
+			name = Debug;
+		};
+		B6C9DF7F2CFBB597007E028A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RTLJ4T3P8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solarscope.SolarScopeARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SolarScopeAR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6C9DF4E2CFBB595007E028A /* Build configuration list for PBXProject "SolarScopeAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C9DF752CFBB597007E028A /* Debug */,
+				B6C9DF762CFBB597007E028A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6C9DF772CFBB597007E028A /* Build configuration list for PBXNativeTarget "SolarScopeAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C9DF782CFBB597007E028A /* Debug */,
+				B6C9DF792CFBB597007E028A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6C9DF7A2CFBB597007E028A /* Build configuration list for PBXNativeTarget "SolarScopeARTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C9DF7B2CFBB597007E028A /* Debug */,
+				B6C9DF7C2CFBB597007E028A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6C9DF7D2CFBB597007E028A /* Build configuration list for PBXNativeTarget "SolarScopeARUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C9DF7E2CFBB597007E028A /* Debug */,
+				B6C9DF7F2CFBB597007E028A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B6C9DF4B2CFBB595007E028A /* Project object */;
+}
