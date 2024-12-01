@@ -52,7 +52,7 @@ def calculate_cost_savings(energy_output):
     return energy_output * ELECTRICITY_RATE
 
 def data_processing_thread():
-    global latest_results
+    global latest_results  # Declare it global at the top of the function
     building_models = pd.read_excel("/Users/tazrinkhalid/SS/SolarScope/SensorAlgo/models_areas.xlsx")
     building_models.columns = building_models.columns.str.strip()
     weather = pd.read_csv("/Users/tazrinkhalid/SS/SolarScope/SensorAlgo/london_ontario_42.984267_-81.247534_psm3-tmy_60_tmy.csv")
@@ -63,20 +63,20 @@ def data_processing_thread():
         if irradiance is None:
             continue
         for _, building in building_models.iterrows():
+            # Check if the building is "bunny"
+            if building['Model Name'] != "bunny":
+                continue  # Skip other buildings
+            
             try:
                 energy = calculate_energy(building, irradiance, weather)
                 cost_savings = calculate_cost_savings(energy)
-                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                latest_results = {
+                timestamp = datetime.now().strftime('%H:%M:%S')
+                latest_results = {  # Update the global variable
                     "timestamp": timestamp,
-                    "building": building['Model Name'],
                     "energy_output": round(energy, 2),
                     "cost_savings": round(cost_savings, 2)
                 }
-                output_string = (
-                    f"{timestamp} | Building: {building['Model Name']} | "
-                    f"Energy Output: {energy:.2f} kWh | Cost Savings: ${cost_savings:.2f} CAD"
-                )
+                output_string = f"{timestamp}, {energy:.2f}, {cost_savings:.2f}"
                 print(output_string)
 
                 # Write to a file (overwrites each time)
@@ -85,5 +85,6 @@ def data_processing_thread():
 
             except KeyError as e:
                 print(f"KeyError: {e}. Please check the column names in models_areas.xlsx.")
+
 
 data_processing_thread()

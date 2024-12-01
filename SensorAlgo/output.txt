@@ -1,1 +1,1 @@
-2024-12-01 03:31:05 | Building: innunguaq | Energy Output: 25122.83 kWh | Cost Savings: $3265.97 CAD
+06:20:48, 499829.09, 64977.78
