@@ -6,12 +6,17 @@ from datetime import datetime
 # Constants for PV system performance
 MODULE_EFFICIENCY = 0.18  # PV module efficiency (18%)
 INVERTER_EFFICIENCY = 0.95  # Inverter efficiency (95%)
+ELECTRICITY_RATE = 0.13  # CAD per kWh
 
-# Set electricity rate (in CAD per kWh, e.g., 0.13 CAD/kWh in Ontario as of 2024)
-ELECTRICITY_RATE = 0.13
+# Shared data structure
+latest_results = {
+    "timestamp": None,
+    "building": None,
+    "energy_output": None,
+    "cost_savings": None
+}
 
-# Function to read real-time Arduino data
-def read_arduino_data(port="/dev/cu.usbmodem1301", baudrate=9600):
+def read_arduino_data(port="/dev/cu.usbmodem11301", baudrate=9600):
     """
     Reads irradiance data from Arduino in real-time.
     Expects data in the format: voltage,irradiance.
@@ -34,72 +39,40 @@ def read_arduino_data(port="/dev/cu.usbmodem1301", baudrate=9600):
         print(f"Error reading from Arduino: {e}")
         return None
 
-# Function to calculate energy performance
 def calculate_energy(building, irradiance, weather):
-    """
-    Calculate energy output for a building given real-time irradiance
-    and weather data adjustments.
-    """
-    # Update column name for area
-    area = building['Footprint']  # Corrected column name
-    tilt = building.get('Tilt (degrees)', 0)  # Default tilt to 0 if missing
-    orientation = building.get('Orientation', 0)  # Default orientation to 0 if missing
-
-    # Use the correct column for GHI
-    if 'GHI' not in weather.columns:
-        raise KeyError("No 'GHI' column found in the weather data. Please check the file.")
-    ghi = weather['GHI'].mean()  # Average GHI
-
-    # Adjust irradiance for tilt and orientation
+    area = building['Footprint']
+    tilt = building.get('Tilt (degrees)', 0)
+    ghi = weather['GHI'].mean()
     tilt_adjusted_irradiance = irradiance * np.cos(np.radians(tilt))
-
-    # Combine with weather GHI
     effective_irradiance = (tilt_adjusted_irradiance + ghi) / 2
-
-    # Calculate energy output (kWh)
     energy_output = area * effective_irradiance * MODULE_EFFICIENCY * INVERTER_EFFICIENCY
     return energy_output
 
-def calculate_cost_savings(energy_output, electricity_rate):
-    # calculate the cost savings in CAD based on energy output and electricity rate.
-    return energy_output * electricity_rate
+def calculate_cost_savings(energy_output):
+    return energy_output * ELECTRICITY_RATE
 
-# Main function for dynamic processing
-def main():
-    # Load novelty building model data
-    building_models = pd.read_excel("/Users/tazrinkhalid/Desktop/SolarScope/venv/models_areas.xlsx")
-    building_models.columns = building_models.columns.str.strip()  # Strip whitespace
-    print("Column Names in Building Models:", building_models.columns.tolist())  # Debugging
+def data_processing_thread():
+    global latest_results
+    building_models = pd.read_excel("/Users/tazrinkhalid/SS/SolarScope/SensorAlgo/models_areas.xlsx")
+    building_models.columns = building_models.columns.str.strip()
+    weather = pd.read_csv("/Users/tazrinkhalid/SS/SolarScope/SensorAlgo/london_ontario_42.984267_-81.247534_psm3-tmy_60_tmy.csv")
 
-    # Load weather data
-    weather = pd.read_csv("/Users/tazrinkhalid/Desktop/SolarScope/venv/london_ontario_42.984267_-81.247534_psm3-tmy_60_tmy.csv")
-
-    print("Starting dynamic energy performance calculations...")
+    print("Starting data processing thread...")
     while True:
-        # Step 1: Read real-time irradiance from Arduino
         irradiance = read_arduino_data()
         if irradiance is None:
-            continue  # Skip iteration if no data is read
-
-        # Step 2: Process each building model dynamically
+            continue
         for _, building in building_models.iterrows():
             try:
-                # Calculate energy output
                 energy = calculate_energy(building, irradiance, weather)
-
-                # Calculate cost savings
-                cost_savings = calculate_cost_savings(energy, ELECTRICITY_RATE)
-
+                cost_savings = calculate_cost_savings(energy)
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                latest_results = {
+                    "timestamp": timestamp,
+                    "building": building['Model Name'],
+                    "energy_output": round(energy, 2),
+                    "cost_savings": round(cost_savings, 2)
+                }
                 print(f"{timestamp} | Building: {building['Model Name']} | Energy Output: {energy:.2f} kWh | Cost Savings: ${cost_savings:.2f} CAD")
             except KeyError as e:
                 print(f"KeyError: {e}. Please check the column names in models_areas.xlsx.")
-                break
-
-        print("Waiting for next irradiance reading...\n")
-
-
-
-# Run the main function
-if __name__ == "__main__":
-    main()
