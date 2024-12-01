@@ -7,6 +7,9 @@ from datetime import datetime
 MODULE_EFFICIENCY = 0.18  # PV module efficiency (18%)
 INVERTER_EFFICIENCY = 0.95  # Inverter efficiency (95%)
 
+# Set electricity rate (in CAD per kWh, e.g., 0.13 CAD/kWh in Ontario as of 2024)
+ELECTRICITY_RATE = 0.13
+
 # Function to read real-time Arduino data
 def read_arduino_data(port="/dev/cu.usbmodem1301", baudrate=9600):
     """
@@ -57,6 +60,9 @@ def calculate_energy(building, irradiance, weather):
     energy_output = area * effective_irradiance * MODULE_EFFICIENCY * INVERTER_EFFICIENCY
     return energy_output
 
+def calculate_cost_savings(energy_output, electricity_rate):
+    # calculate the cost savings in CAD based on energy output and electricity rate.
+    return energy_output * electricity_rate
 
 # Main function for dynamic processing
 def main():
@@ -78,9 +84,14 @@ def main():
         # Step 2: Process each building model dynamically
         for _, building in building_models.iterrows():
             try:
+                # Calculate energy output
                 energy = calculate_energy(building, irradiance, weather)
+
+                # Calculate cost savings
+                cost_savings = calculate_cost_savings(energy, ELECTRICITY_RATE)
+
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                print(f"{timestamp} | Building: {building['Model Name']} | Energy Output: {energy:.2f} kWh")
+                print(f"{timestamp} | Building: {building['Model Name']} | Energy Output: {energy:.2f} kWh | Cost Savings: ${cost_savings:.2f} CAD")
             except KeyError as e:
                 print(f"KeyError: {e}. Please check the column names in models_areas.xlsx.")
                 break
