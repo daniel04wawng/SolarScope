@@ -73,6 +73,17 @@ def data_processing_thread():
                     "energy_output": round(energy, 2),
                     "cost_savings": round(cost_savings, 2)
                 }
-                print(f"{timestamp} | Building: {building['Model Name']} | Energy Output: {energy:.2f} kWh | Cost Savings: ${cost_savings:.2f} CAD")
+                output_string = (
+                    f"{timestamp} | Building: {building['Model Name']} | "
+                    f"Energy Output: {energy:.2f} kWh | Cost Savings: ${cost_savings:.2f} CAD"
+                )
+                print(output_string)
+
+                # Write to a file (overwrites each time)
+                with open("output.txt", "w") as file:
+                    file.write(output_string + "\n")
+
             except KeyError as e:
                 print(f"KeyError: {e}. Please check the column names in models_areas.xlsx.")
+
+data_processing_thread()
