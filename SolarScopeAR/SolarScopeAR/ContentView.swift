@@ -1,40 +1,46 @@
-//
-//  ContentView.swift
-//  SolarScopeAR
-//
-//  Created by Alyssa Spasic on 2024-11-30.
-//
-
 import SwiftUI
 import RealityKit
+import ARKit
 
-struct ContentView : View {
-
+struct ContentView: View {
     var body: some View {
-        RealityView { content in
-
-            // Create a cube model
-            let model = Entity()
-            let mesh = MeshResource.generateBox(size: 0.1, cornerRadius: 0.005)
-            let material = SimpleMaterial(color: .gray, roughness: 0.15, isMetallic: true)
-            model.components.set(ModelComponent(mesh: mesh, materials: [material]))
-            model.position = [0, 0.05, 0]
-
-            // Create horizontal plane anchor for the content
-            let anchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: SIMD2<Float>(0.2, 0.2)))
-            anchor.addChild(model)
-
-            // Add the horizontal plane anchor to the scene
-            content.add(anchor)
-
-            content.camera = .spatialTracking
-
-        }
-        .edgesIgnoringSafeArea(.all)
+        ARViewContainer()
+            .edgesIgnoringSafeArea(.all)
     }
-
 }
 
-#Preview {
-    ContentView()
+struct ARViewContainer: UIViewRepresentable {
+    func makeUIView(context: Context) -> ARView {
+        // creates ARView
+        let arView = ARView(frame: .zero)
+
+        // loads the .usdz model
+        if let modelEntity = try? ModelEntity.load(named: "bunny-3D-heatmap") {
+            // scale the model down
+            modelEntity.scale = SIMD3<Float>(0.0007, 0.0007, 0.0007) // 0.0008% of original size
+
+            // positions the model right in front of the camera
+            modelEntity.position = SIMD3<Float>(0, -0.1, -4.5) // 1.0 cm infront
+
+            // creates anchor for the model
+            let anchor = AnchorEntity(plane: .horizontal)
+            anchor.addChild(modelEntity)
+
+            // add the anchor to AR scene
+            arView.scene.addAnchor(anchor)
+        } else {
+            print("Failed to load model")
+        }
+
+        // configure AR session
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = [.horizontal, .vertical]
+        arView.session.run(config)
+
+        return arView
+    }
+
+    func updateUIView(_ uiView: ARView, context: Context) {
+        // update ARView if necessary
+    }
 }
